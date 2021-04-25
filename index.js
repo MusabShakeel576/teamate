@@ -2,8 +2,8 @@ const Discord =  require('discord.js');
 
 const client = new Discord.Client();
 const prefix = '!';
-const embedChannelId = '835113225066381342';
-const botId = '834200077634502726';
+const embedChannelId = '835944545119633408';
+const botId = '835829445167939644';
 client.once('ready', () => {
     console.log('Teamate is online!');
 });

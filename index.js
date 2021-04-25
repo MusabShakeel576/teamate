@@ -23,7 +23,7 @@ client.on('message', message => {
         const filter = m => m.author.id === message.author.id;
         const collector = new Discord.MessageCollector(message.channel, filter, {
             max: questions.length,
-            time: 1000 * 30
+            time: 1000 * 60
         })
         message.channel.send(questions[counter++])
         collector.on('collect', m => {

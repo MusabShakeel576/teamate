@@ -2,7 +2,7 @@ const Discord =  require('discord.js');
 
 const client = new Discord.Client();
 const prefix = '!';
-const embedChannelId = '835113225066381342';
+const embedChannelId = '835944545119633408';
 const botId = '835829445167939644';
 client.once('ready', () => {
     console.log('Teamate is online!');
@@ -23,7 +23,7 @@ client.on('message', message => {
         const filter = m => m.author.id === message.author.id;
         const collector = new Discord.MessageCollector(message.channel, filter, {
             max: questions.length,
-            time: 1000 * 15
+            time: 1000 * 60
         })
         message.channel.send(questions[counter++])
         collector.on('collect', m => {

@@ -1,8 +1,32 @@
 const Discord =  require('discord.js');
+// const mongoose = require('mongoose');
+
+// Mongoose
+// const Schema = mongoose.Schema;
+// dbURI = 'mongodb+srv://musab:OxsYtf5FwoNTTOwH@cluster0.de32t.mongodb.net/teamate?retryWrites=true&w=majority';
+// mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then((result) => console.log('MongoDB connected!'))
+//     .catch((err) => console.log(err))
+
+// const teamateSchema = new Schema({
+//     guildID: {
+//         type: String,
+//         required: true
+//     },
+//     guildName: {
+//         type: String,
+//         required: true
+//     },
+//     embedId: {
+//         type: String,
+//         required: true
+//     },
+// }, {timestamps: true})
+// const Teamate = mongoose.model('Teamate', teamateSchema);
 
 const client = new Discord.Client();
 const prefix = '!';
-const embedChannelId = '835944545119633408';
+const embedChannelId = '774655655453261834';
 const botId = '835829445167939644';
 client.once('ready', () => {
     console.log('Teamate is online!');
@@ -12,6 +36,15 @@ client.on('message', message => {
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift();
+    if(command.startsWith("tset")){
+        console.log(command);
+        // const teamate = new Teamate({
+        //     guildID: message.guild.id,
+        //     guildName: message.guild.name,
+        //     embedId: message.content
+        // })
+        // teamate.save();
+    }
     if(command.startsWith("team")){
         const questions = [
             'Which mode do you want to play? (Eg: Trio Creative Map)',

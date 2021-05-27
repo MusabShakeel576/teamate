@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // Mongoose
 const Schema = mongoose.Schema;
-dbURI = 'MongoDB URI Goes Here';
+dbURI = process.env.dbURI;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => console.log('MongoDB connected!'))
     .catch((err) => console.log(err))

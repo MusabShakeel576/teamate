@@ -26,7 +26,7 @@ const Teamate = mongoose.model('Teamate', teamateSchema);
 
 const client = new Discord.Client();
 const prefix = '!';
-const botId = process.env.token;
+const botId = '835829445167939644';
 client.once('ready', () => {
     console.log('Teamate is online!');
 });

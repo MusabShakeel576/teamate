@@ -45,7 +45,7 @@ client.on('message', message => {
         teamate.save();
     }
     if(command.startsWith("team")){
-        Teamate.find({ guildID: message.guild.id })
+        Teamate.findOne({ guildID: message.guild.id }).sort({'_id':-1}).limit(1)
         .exec(function(err, teamates){
             if(err){
                 console.log('Error while connecting finding data');

@@ -55,6 +55,7 @@ client.on('message', message => {
                 }else{
                     console.log('new', teamates.length);
                     const embedChannelId = teamates[0].embedId;
+                    message.channel.send(embedChannelId);
                     const questions = [
                         'Which mode do you want to play? (Eg: Trio Creative Map)',
                         'How many players do you need? (Eg: 2)',
